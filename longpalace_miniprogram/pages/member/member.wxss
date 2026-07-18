@@ -1,0 +1,224 @@
+.growth-num {
+  color: #d8b76a;
+  font-weight: bold;
+}
+
+.btn-disabled {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: rgba(245, 241, 232, 0.35) !important;
+  box-shadow: none !important;
+}
+
+.avatar-img {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 2px solid rgba(216, 183, 106, 0.55);
+  display: block;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 32rpx;
+  text-align: left;
+}
+
+.user-profile-left {
+  flex-shrink: 0;
+}
+
+.user-profile-right {
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+  overflow: hidden;
+}
+
+.user-profile-right .h1 {
+  margin: 0;
+}
+
+.grade-tag {
+  display: inline-block;
+  padding: 4rpx 24rpx;
+  border-radius: 999rpx;
+  border: 1px solid rgba(216, 183, 106, 0.45);
+  color: var(--gold);
+  font-size: 24rpx;
+  background: rgba(216, 183, 106, 0.08);
+  max-width: 50%;
+  text-align: center;
+  height: 32rpx;
+  line-height: 32rpx;
+}
+
+.page-title{
+  padding-bottom: 0rpx;
+}
+
+.page-body{
+  background: radial-gradient(circle at top, #14294d 0%, var(--bg) 46%, #020309 100%);
+  margin-bottom: 50rpx;
+}
+
+.card-title{
+    display: grid;
+    /* 两列布局：第一列固定192rpx，第二列占剩余全部宽度 */
+    grid-template-columns: 192rpx 1fr;
+    justify-content: center;
+}
+
+.card button{
+  margin-top: 20rpx !important;
+  width: 100% !important;
+}
+
+.growth-num{
+  text-align: right;
+}
+
+.footer{
+  padding:0rpx;
+  background: transparent;
+  border: 0rpx;
+}
+
+.footer button{
+  margin: 0rpx;
+}
+
+.edit-icon {
+  display: inline-block;
+  font-size: 28rpx;
+  color: var(--gold);
+  margin-left: 12rpx;
+  vertical-align: middle;
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+.modal-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-dialog {
+  width: 80%;
+  max-width: 640rpx;
+  background: #1a1d28;
+  border-radius: 40rpx;
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.modal-title {
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: var(--text);
+  padding: 40rpx 0 20rpx;
+}
+
+.modal-body {
+  padding: 20rpx 48rpx 32rpx;
+}
+
+.edit-row {
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+  margin-bottom: 28rpx;
+  min-height: 100rpx;
+}
+
+.edit-label {
+  font-size: 30rpx;
+  color: var(--muted);
+  flex-shrink: 0;
+  width: 80rpx;
+}
+
+.avatar-picker {
+  min-width: 120rpx !important;
+  max-width: 120rpx !important;
+  min-height: 120rpx !important;
+  max-height: 120rpx !important;
+  border-radius: 50% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid var(--line) !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: none !important;
+  line-height: 1 !important;
+}
+
+.avatar-picker::after {
+  border: none !important;
+}
+
+.edit-avatar-img {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.edit-avatar-placeholder {
+  font-size: 22rpx;
+  color: var(--muted);
+  text-align: center;
+}
+
+.edit-input {
+  flex: 1;
+  height: 80rpx;
+  border-radius: 16rpx;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  padding: 0 24rpx;
+  font-size: 28rpx;
+}
+
+.modal-footer {
+  display: flex;
+  border-top: 1px solid var(--line);
+}
+
+.modal-btn {
+  flex: 1;
+  height: 100rpx !important;
+  line-height: 100rpx !important;
+  border-radius: 0 !important;
+  font-size: 32rpx !important;
+  font-weight: 700 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.modal-btn::after {
+  border: none !important;
+}
+
+.modal-btn.cancel {
+  color: var(--muted) !important;
+  border-right: 1px solid var(--line);
+}
+
+.modal-btn.confirm {
+  color: var(--gold) !important;
+}

@@ -1,0 +1,114 @@
+<topbar title="云南AI情报室" subtitle="AI INFO · YUNNAN" badge="会员 {{memberCount}} 人" />
+
+<view class="page-body">
+  <view class="hero container">
+
+    <view class="h1" style="margin-top: 0rpx;"><text>唤醒你的 AI 军团</text></view>
+    <view class="kicker">云南 AI 实战者社区</view>
+    <!-- <view class="lead">一个人，也能拥有一支 AI 团队。每天 8 点情报入海，专属 Agent 替你打捞，做出的成果凝成珍珠——被看见、被孵化、被投资。</view> -->
+    <!-- <view class="actions">
+      <view class="btn" bindtap="scrollToJoin">输入邀请码 · 入宫</view>
+      <view class="btn secondary" bindtap="goDaily">先看今日情报</view>
+    </view> -->
+    <view class="stats">
+      <view class="stat" bind:tap="goReportList">
+        <text class="strong">{{articleCount}}</text>
+        <text>期日报</text>
+      </view>
+      <view class="stat">
+        <text class="strong">{{eventCount}}</text>
+        <text>场活动</text>
+      </view>
+      <view class="stat">
+        <text class="strong">{{memberCount}}</text>
+        <text>位会员</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="section container">
+    <view class="kicker">入宫三宝</view>
+    <view class="h2">你将获得</view>
+    <view class="grid-3">
+      <view class="card">
+        <view class="card-title">
+          <view class="icon">报</view>
+          <view class="h3">每日情报</view>
+        </view>
+          <view class="p">每天 3-5 条 AI 重大动态，只讲和云南产业有关的——附可直接复制的 Prompt 和工具清单，看完就能用在自己生意上。</view>
+      </view>
+      <view class="card">
+        <view class="card-title">
+          <view class="icon">智</view>
+          <view class="h3">专属 Agent</view>
+        </view>
+        <view class="p">申请一只属于你的 AI 助手。客服、选品、文案、报表——把重复的活交给它，你只做决定。</view>
+      </view>
+      <view class="card">
+        <view class="card-title">
+          <view class="icon">珠</view>
+          <view class="h3">珍珠作品</view>
+        </view>
+        <view class="p">在龙宫系统里完成实战任务，成果凝结成珍珠上墙展示——优秀珍珠进入孵化与投资观察名单。</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="section container">
+    <view class="kicker">入宫航线</view>
+    <view class="h2">从旁观到共创</view>
+    <view class="route">
+      <view class="step">
+        <view class="step-num">STEP 1</view>
+        <view>
+          <text class="bold">参加一场活动</text>
+          <view class="muted">线下实战营 / 线上直播，现场领取邀请码</view>
+        </view>
+      </view>
+      <view class="step">
+        <view class="step-num">STEP 2</view>
+        <view>
+          <text class="bold">每天 5 分钟情报</text>
+          <view class="muted">跟上 AI 的速度，攒成长值，解锁更多权益</view>
+        </view>
+      </view>
+      <view class="step">
+        <view class="step-num">STEP 3</view>
+        <view>
+          <text class="bold">唤醒你的 Agent</text>
+          <view class="muted">把今天学到的，立刻用在自己的业务上</view>
+        </view>
+      </view>
+      <view class="step">
+        <view class="step-num">STEP 4</view>
+        <view>
+          <text class="bold">凝结第一颗珍珠</text>
+          <view class="muted">完成实战任务，作品上墙，被全宫看见</view>
+        </view>
+      </view>
+      <view class="step">
+        <view class="step-num">STEP 5</view>
+        <view>
+          <text class="bold">进入孵化与投资</text>
+          <view class="muted">月度龙珠评选 → 孵化辅导 → 投资观察名单</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- <view id="join" class="section container invite">
+    <view class="kicker" style="text-align: left;">龙宫开门，凭帖入宫</view>
+    <view class="card">
+      <view class="h2">每场活动现场发放邀请码</view>
+      <view class="muted">关注公众号「龙宫AI情报室」回复“入宫”领取</view>
+      <view class="input-row">
+        <input type="text" placeholder="请输入邀请码" bindinput="onInputCode" />
+        <button bindtap="unlock">入宫</button>
+      </view>
+    </view>
+  </view> -->
+
+  <!-- <view class="footer container">
+    <text class="small">龙宫 LONG PALACE\n云南省对外科技合作协会 · AI专业委员会 · 生态社区</text>
+  </view> -->
+</view>

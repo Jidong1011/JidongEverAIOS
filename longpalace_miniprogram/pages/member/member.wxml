@@ -1,0 +1,91 @@
+<topbar title="会员中心" subtitle="MEMBER CENTER" badge="" />
+<view class="page-body">
+  <view class="container">
+    <view class="page-title">
+      <view class="card" style="text-align:center">
+        <block wx:if="{{isLogin}}">
+          <view class="user-profile" bindtap="showEditModal">
+            <view class="user-profile-left">
+              <image wx:if="{{avatar}}" class="avatar-img" src="{{avatar}}" mode="aspectFill" />
+              <view wx:else class="avatar">{{userName[0] || 'AI·'}}</view>
+            </view>
+            <view class="user-profile-right">
+              <text>你好，</text>
+              <view class="h3" >
+                {{userName}}
+              </view>
+              <!-- <view class="grade-tag" wx:if="{{gradeName}}">{{gradeName}}</view>               -->
+            </view>
+          </view>
+        </block>
+        <block wx:else>
+          <view class="avatar">AI</view>
+          <view class="lead">登录后查看你的 Agent、成长值、珍珠作品和活动权益。</view>
+          <view class="actions">
+            <button bindtap="wxLogin">微信登录</button>
+          </view>
+        </block>
+      </view>
+    </view>
+
+    <view class="section">
+      <view class="grid-2">
+        <view class="card">
+          <view class="h3">会员权益
+            <view class="grade-tag" wx:if="{{gradeName}}"> {{gradeName}}</view>
+          </view>
+          <view class="muted">{{gradeIntro}}</view>
+          <button bindtap="goBenefits">更多权益</button>
+        </view>
+        <!-- <view class="card">
+          <view class="card-title">
+            <view class="h3">珍珠</view>
+            <view class="growth-num h2">--</view>
+          </view>
+          <view class="muted">阅读日报、参加活动、提交珍珠、帮助他人，都会增加珍珠。</view>
+        </view> -->
+        <view class="card">
+          <view class="h3">我的应用</view>
+          <view class="p">当前状态：待唤醒</view>
+          <view class="muted">升级AI会员，可申领专属 AI 助手，绑定你的业务场景和知识库。</view>
+          <button class="{{gradeLevel <= 1 ? 'btn-disabled' : ''}}" disabled="{{gradeLevel <= 1}}">
+            {{gradeLevel <= 1? 'AI会员专属' : '点击查看'}}
+          </button>
+        </view>
+
+        <!-- <view class="card">
+          <view class="h3">我的珍珠</view>
+          <view class="muted">你还没有提交珍珠。完成一次实战任务后，可将成果上传到珍珠墙。</view>
+          <button>提交作品</button>
+        </view> -->
+        <view class="card footer">
+          <button bind:tap="logout">退出登录</button>
+        </view>
+
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="modal-mask" wx:if="{{showEdit}}" bindtap="hideEditModal">
+  <view class="modal-dialog" catchtap="noop">
+    <view class="modal-title">编辑资料</view>
+    <view class="modal-body">
+      <view class="edit-row">
+        <text class="edit-label">头像</text>
+        <button class="avatar-picker" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
+          <image wx:if="{{editAvatar}}" class="edit-avatar-img" src="{{editAvatar}}" mode="aspectFill" />
+          <view wx:else class="edit-avatar-placeholder">选择</view>
+        </button>
+      </view>
+      <view class="edit-row">
+        <text class="edit-label">昵称</text>
+        <input class="edit-input" type="nickname" placeholder="请输入昵称" value="{{editName}}" bindinput="onInputName" bindblur="onInputName" />
+      </view>
+    </view>
+    <view class="modal-footer">
+      <button class="modal-btn cancel" bindtap="hideEditModal">取消</button>
+      <button class="modal-btn confirm" bindtap="saveProfile" loading="{{saving}}">保存</button>
+    </view>
+  </view>
+</view>

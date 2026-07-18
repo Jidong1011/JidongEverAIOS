@@ -1,0 +1,51 @@
+page{
+  padding-bottom: 0rpx !important;
+}
+
+.page-body {
+  background: radial-gradient(circle at top, #14294d 0%, var(--bg) 46%, #020309 100%);
+}
+
+.report-item {
+  align-items: center;
+  cursor: pointer;
+}
+
+.report-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.report-main .h4 {
+  margin-bottom: 12rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.report-main .small {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.report-meta {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+  margin-top: 16rpx;
+}
+
+.report-arrow {
+  font-size: 48rpx;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.loading-tip {
+  text-align: center;
+  color: var(--muted);
+  font-size: 26rpx;
+  padding: 40rpx 0;
+}

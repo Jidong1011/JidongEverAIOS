@@ -1,0 +1,45 @@
+.bottom-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+  background: rgba(4, 6, 11, .86);
+  backdrop-filter: blur(18px);
+  border-top: 1px solid rgba(255, 255, 255, .14);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.inner {
+  width: min(720rpx, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.nav-item {
+  padding: 20rpx 12rpx 16rpx;
+  text-align: center;
+  color: rgba(245, 241, 232, .72);
+  font-size: 24rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-icon {
+  display: block;
+  color: #f5f1e8;
+  font-size: 36rpx;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.nav-text {
+  font-size: 22rpx;
+}
+
+.nav-item.active .nav-icon,
+.nav-item.active .nav-text {
+  color: #d8b76a;
+}

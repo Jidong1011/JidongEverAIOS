@@ -1,0 +1,57 @@
+<topbar title="登录" subtitle="LOGIN" />
+
+<view class="page-body">
+  <view class="login-card container">
+    <view class="card">
+      <view class="kicker">微信授权</view>
+      <view class="h2">登录</view>
+      <view class="p">授权微信账号，开启你的 AI 军团之旅</view>
+
+      <view class="login-features">
+        <view class="login-feature-item">
+          <view class="login-feature-icon">√</view>
+          <view>
+            <view class="h4">每日情报</view>
+            <view class="muted">每天 3-5 条 AI 动态</view>
+          </view>
+        </view>
+        <view class="login-feature-item">
+          <view class="login-feature-icon">√</view>
+          <view>
+            <view class="h4">专属 Agent</view>
+            <view class="muted">你的 AI 助手</view>
+          </view>
+        </view>
+        <view class="login-feature-item">
+          <view class="login-feature-icon">√</view>
+          <view>
+            <view class="h4">珍珠作品</view>
+            <view class="muted">成果被看见</view>
+          </view>
+        </view>
+      </view>
+
+      <button class="wx-login-btn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+        <text>微信一键登录</text>
+      </button>
+
+      <button class="wx-cancelLogin-btn" bindtap="cancelLogin">
+        <text>暂不登录</text>
+      </button>
+
+      <view class="login-agreement">
+        <view class="agreement-check" bindtap="toggleAgree">
+          <view class="checkbox {{agreed ? 'checked' : ''}}"></view>
+          <text class="small">我已阅读并同意</text>
+        </view>
+        <text class="link" bindtap="goAgreement">《用户协议》</text>
+        <text class="small">和</text>
+        <text class="link" bindtap="goPrivacy">《隐私政策》</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="footer container">
+    <text class="small">龙宫 LONG PALACE\n云南省对外科技合作协会 · AI专业委员会</text>
+  </view>
+</view>

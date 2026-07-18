@@ -1,0 +1,152 @@
+.page-body {
+  padding-bottom: 140rpx;
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+/* 图片轮播 */
+.goods-images .swiper {
+  width: 100%;
+  height: 600rpx;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 商品信息 */
+.goods-info {
+  padding: 32rpx;
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+}
+
+.info-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20rpx;
+}
+
+.price-row {
+  display: flex;
+  align-items: baseline;
+}
+
+.price-symbol {
+  font-size: 28rpx;
+  color: var(--red);
+  font-weight: bold;
+}
+
+.price {
+  font-size: 52rpx;
+  color: var(--red);
+  font-weight: bold;
+}
+
+.linePrice {
+  font-size: 28rpx;
+  color: var(--muted);
+  text-decoration: line-through;
+  margin-left: 16rpx;
+}
+
+.sales {
+  font-size: 26rpx;
+  color: var(--muted);
+}
+
+.goods-name {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.goods-salePoint {
+  font-size: 26rpx;
+  color: var(--gold);
+  margin-top: 16rpx;
+}
+
+/* 商品详情 */
+.goods-content {
+  margin-top: 20rpx;
+  padding: 32rpx;
+  background: var(--card);
+}
+
+.content-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: var(--text);
+  padding-bottom: 24rpx;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 24rpx;
+}
+
+.content-detail {
+  font-size: 28rpx;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.content-empty {
+  text-align: center;
+  color: var(--muted);
+  font-size: 28rpx;
+  padding: 60rpx 0;
+}
+
+/* 加载中 */
+.loading {
+  text-align: center;
+  padding: 100rpx 0;
+  color: var(--muted);
+  font-size: 28rpx;
+}
+
+/* 底部报名栏 */
+.footer-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  background: var(--card);
+  border-top: 1px solid var(--line);
+  z-index: 100;
+}
+
+.footer-back {
+  width: 160rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: var(--muted);
+  border-right: 1px solid var(--line);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.enroll-btn {
+  flex: 1;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: var(--bg);
+  background: var(--gold);
+  border: none;
+  border-radius: 0;
+}
+
+.enroll-btn::after {
+  border: none;
+}

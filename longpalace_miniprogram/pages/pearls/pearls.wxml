@@ -1,0 +1,63 @@
+<topbar title="珍珠作品" subtitle="PEARLS · OUTPUT WALL" badge="36 颗珍珠" />
+<view class="page-body">
+  <view class="container">
+    <view class="page-title">
+      <view class="kicker">完成任务，凝结珍珠</view>
+      <!-- <view class="h1">被看见的 AI 实战成果</view> -->
+      <view class="lead">每一颗珍珠，都是一个真实业务问题被 AI 解决后的可展示成果。</view>
+    </view>
+
+    <view class="section">
+      <view class="grid-3">
+        <view class="card">
+          <veiw class="card-title">
+            <text class="tag">产业方案</text>
+            <view class="h4">白芸豆 AI 交易中心路演稿</view>
+          </veiw>
+          <view class="p">用 AI 将政策、产业链、交易平台、可信仓和金融质押逻辑整理成 8 页路演稿。</view>
+          <view class="small">贡献者：纪东不已 · 第 42 期任务</view>
+        </view>
+        <view class="card">
+          <view class="card-title">
+            <text class="tag">内容工厂</text>
+            <view class="h4">云南咖啡短视频选题库</view>
+          </view>
+          <view class="p">生成 30 条可拍摄短视频选题，并按人群、场景、转化目标建立发布节奏。</view>
+          <view class="small">贡献者：龙宫会员 · AI Lab</view>
+        </view>
+        <view class="card">
+          <view class="card-title">
+            <text class="tag">Agent流程</text>
+            <view class="h3">茶叶客服 Agent SOP</view>
+          </view>
+          <view class="p">把售前咨询、口味推荐、物流查询、复购提醒封装为可审核的客服 Agent 流程。</view>
+          <view class="small">贡献者：企业试点 · 电商组</view>
+        </view>
+        <view class="card">
+          <view class="card-title">
+            <text class="tag">视觉识别</text>
+            <view class="h3">农产品分级模型选型表</view>
+          </view>
+          <view class="p">围绕成本、精度、样本量、部署方式和设备维护，完成县域加工厂可用的选型清单。</view>
+          <view class="small">贡献者：第 41 期任务</view>
+        </view>
+        <view class="card">
+          <view class="card-title">
+            <text class="tag">文旅内容</text>
+            <view class="h3">大理一日游 AI 内容包</view>
+          </view>
+          <view class="p">包含小红书笔记、视频脚本、路线地图说明和私域转化话术。</view>
+          <view class="small">贡献者：文旅组</view>
+        </view>
+        <view class="card">
+          <view class="card-title">
+            <text class="tag">组织进化</text>
+            <view class="h3">OPT → OPC 个人能力看板</view>
+          </view>
+          <view class="p">将个人 Feature、Skill、Capacity、Pattern、Configuration 形成一张可复盘看板。</view>
+          <view class="small">贡献者：双三角练习营</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

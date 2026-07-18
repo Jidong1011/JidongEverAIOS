@@ -1,0 +1,142 @@
+<view class="benefits-page">
+  <view class="benefits-header">
+    <view class="benefits-title">会员权益</view>
+    <view class="benefits-subtitle">MEMBER BENEFITS</view>
+    <view class="tabs">
+      <view class="tab {{activeTab === 0 ? 'tab-active' : ''}}" bindtap="switchTab" data-index="0">
+        <text>V1 普通会员</text>
+        <text wx:if="{{gradeLevel <= 1}}"> ✅️</text>
+        <test style= "font-size: 20rpx;">(免费)</test>
+      </view>
+      <view class="tab {{activeTab === 1 ? 'tab-active' : ''}}" bindtap="switchTab" data-index="1">
+        <text>V2 AI会员</text>
+        <text wx:if="{{gradeLevel > 1}}"> ✅️</text>
+        <test style= "font-size: 20rpx;">(98元/月)</test>
+      </view>
+    </view>
+    <text class="kicker" wx:if="{{couponCount > 0}}">您有{{couponCount}}张优惠券,半价体验AI会员</text>
+  </view>
+
+  <view class="benefits-content">
+    <block wx:if="{{activeTab === 0}}">
+      <view class="benefit-card">
+        <view class="benefit-icon">📰</view>
+        <view class="benefit-info">
+          <view class="benefit-name">每日情报</view>
+          <view class="benefit-desc">每天 3-5 条 AI 行业动态精选</view>
+        </view>
+      </view>
+      <view class="benefit-card">
+        <view class="benefit-icon">📖</view>
+        <view class="benefit-info">
+          <view class="benefit-name">日报工具箱</view>
+          <view class="benefit-desc">基础 Prompt 模板库，快速上手 AI 工具</view>
+        </view>
+      </view>
+      <view class="benefit-card">
+        <view class="benefit-icon">🎯</view>
+        <view class="benefit-info">
+          <view class="benefit-name">活动报名</view>
+          <view class="benefit-desc">参加社区线上活动，积累成长值</view>
+        </view>
+      </view>
+    </block>
+
+    <block wx:if="{{activeTab === 1}}">
+      <view class="benefit-card highlight">
+        <view class="benefit-icon">🤖</view>
+        <view class="benefit-info">
+          <view class="benefit-name">专属 AI Agent</view>
+          <view class="benefit-desc">创建你的专属AI助理，7×24 小时智能助手</view>
+        </view>
+      </view>
+      <view class="benefit-card highlight">
+        <view class="benefit-icon">⚡</view>
+        <view class="benefit-info">
+          <view class="benefit-name">高级 Prompt 模板库</view>
+          <view class="benefit-desc">行业深度模板，覆盖营销、运营、研发等场景</view>
+        </view>
+      </view>
+      <view class="benefit-card highlight">
+        <view class="benefit-icon">🏆</view>
+        <view class="benefit-info">
+          <view class="benefit-name">活动优先报名</view>
+          <view class="benefit-desc">限量活动提前 24 小时开放报名通道</view>
+        </view>
+      </view>
+      <view class="benefit-card highlight">
+        <view class="benefit-icon">🏢</view>
+        <view class="benefit-info">
+          <view class="benefit-name">企业试点共创</view>
+          <view class="benefit-desc">参与企业级 AI 落地项目，获取实战经验</view>
+        </view>
+      </view>
+      <view class="benefit-card highlight">
+        <view class="benefit-icon">🚀</view>
+        <view class="benefit-info">
+          <view class="benefit-name">孵化观察名单</view>
+          <view class="benefit-desc">优质项目优先获得孵化资源和投资对接</view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="benefits-footer">
+    <button class="btn-upgrade" bindtap="upgrade">
+      <text wx:if="{{gradeLevel <= 1}}">升级AI会员</text>
+      <text wx:if="{{gradeLevel > 1}}">续费AI会员</text>
+      <text wx:if="{{couponCount > 0}}">（49元）</text>
+      <text wx:else>（98元）</text>
+    </button>
+    <button class="btn-back" bindtap="goBack">返回</button>
+  </view>
+</view>
+
+<view class="pay-mask" wx:if="{{showPayPopup}}" bindtap="closePayPopup">
+  <view class="pay-dialog" catchtap="noop">
+    <view class="pay-close" bindtap="closePayPopup">✕</view>
+
+    <block wx:if="{{payStep === 1}}">
+      <view class="pay-title">确认升级</view>
+      <view class="pay-body">
+        <view class="pay-grade-name">V2 AI会员</view>
+        <view class="pay-grade-price">
+          <text class="pay-rmb">￥</text>
+          <text class="pay-price-num">{{couponCount > 0 ? '49' : '98'}}</text>
+          <text class="pay-period">/月</text>
+        </view>
+        <view class="pay-grade-info">
+          <view class="pay-info-item">
+            <text class="pay-info-label">有效期：</text>
+            <text class="pay-info-value">30天</text>
+          </view>
+          <view class="pay-info-item">
+            <text class="pay-info-label">权益说明：</text>
+            <text class="pay-info-value">专属AI Agent、高级模板库、活动优先、企业试点、孵化观察</text>
+          </view>
+        </view>
+      </view>
+      <view class="pay-action">
+        <button class="pay-btn" bindtap="goPayStep2">立即购买</button>
+      </view>
+    </block>
+
+    <block wx:if="{{payStep === 2}}">
+      <view class="pay-title">支付确认</view>
+      <view class="pay-body">
+        <view class="pay-coupon-row" wx:if="{{couponInfo && couponInfo.amount}}" bindtap="toggleCoupon">
+          <view class="pay-coupon-check {{useCoupon ? 'checked' : ''}}">✓</view>
+          <text class="pay-coupon-text">使用卡券抵扣</text>
+          <text class="pay-coupon-amount">￥{{couponInfo.amount}}</text>
+        </view>
+        <view class="pay-real-amount">
+          <text class="pay-real-label">实付金额：</text>
+          <text class="pay-real-num">￥{{couponCount > 0 && useCoupon ? '0' : (couponCount > 0 ? '49' : '98')}}</text>
+        </view>
+      </view>
+      <view class="pay-action">
+        <button class="pay-btn" bindtap="doPay" loading="{{paying}}">确认支付</button>
+      </view>
+    </block>
+  </view>
+</view>

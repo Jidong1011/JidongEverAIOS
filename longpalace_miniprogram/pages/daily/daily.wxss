@@ -1,0 +1,22 @@
+.bold {
+  font-weight: bold;
+}
+
+.page-body{
+  background: radial-gradient(circle at top, #14294d 0%, var(--bg) 46%, #020309 100%);
+  margin-bottom:50rpx;
+}
+
+.page-title{
+  padding-bottom: 10rpx;
+}
+.h2 {
+  margin-bottom: 0rpx;
+}
+
+.loading-tip {
+  text-align: center;
+  color: var(--muted);
+  font-size: 26rpx;
+  padding: 40rpx 0;
+}

@@ -1,0 +1,171 @@
+.page-body{
+  background: radial-gradient(circle at top, #14294d 0%, var(--bg) 46%, #020309 100%);
+  padding-top: 30rpx;
+}
+
+.login-hero {
+  text-align: center;
+  padding: 120rpx 0 60rpx;
+}
+
+.login-logo {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  border: 2px solid rgba(216, 183, 106, 0.55);
+  color: var(--gold);
+  font-size: 88rpx;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 40rpx;
+  background: radial-gradient(circle, rgba(216, 183, 106, 0.16), rgba(255, 255, 255, 0.02));
+  box-shadow: 0 0 80rpx rgba(216, 183, 106, 0.15);
+}
+
+.login-card {
+  padding: 0rpx;
+}
+
+
+
+.login-feature-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  border: 1px solid var(--line);
+  border-radius: 32rpx;
+  padding: 20rpx 16rpx;
+  background: rgba(255, 255, 255, 0.03);
+  margin-top: 50rpx;
+}
+
+.login-feature-icon {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  border: 1px solid rgba(216, 183, 106, 0.45);
+  color: var(--gold);
+  font-weight: 900;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(216, 183, 106, 0.08);
+  flex-shrink: 0;
+}
+
+.wx-login-btn {
+  width: 100% !important;
+  height: 100rpx !important;
+  border-radius: 999px !important;
+  background: #07c160 !important;
+  color: #fff !important;
+  font-size: 32rpx !important;
+  font-weight: 700 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 16rpx;
+  border: none !important;
+  margin-top: 40rpx !important;
+  box-shadow: 0 20rpx 60rpx rgba(7, 193, 96, 0.25) !important;
+}
+
+.wx-cancelLogin-btn{
+  width: 100% !important;
+  height: 100rpx !important;
+  border-radius: 999px !important;
+  border: 1rpx solid #fff !important;
+  background: rgba(226, 226, 226, 0.4) !important;
+  color: #AAA !important;
+  font-size: 32rpx !important;
+  font-weight: 700 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 16rpx;
+  border: none !important;
+  margin-top: 40rpx !important;
+  box-shadow: 0 20rpx 60rpx rgba(255, 255, 255, 0.15) !important;
+}
+
+.wx-login-btn::after {
+  border: none !important;
+}
+
+.wx-icon {
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  font-weight: 900;
+}
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+  margin: 40rpx 0;
+}
+
+.divider-text {
+  color: var(--muted);
+  font-size: 26rpx;
+}
+
+.login-agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8rpx;
+  margin-top: 36rpx;
+  flex-wrap: wrap;
+}
+
+.agreement-check {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+}
+
+.checkbox {
+  width: 32rpx;
+  height: 32rpx;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.checkbox.checked {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.checkbox.checked::after {
+  content: '';
+  width: 14rpx;
+  height: 14rpx;
+  background: #17120a;
+  border-radius: 50%;
+}
+
+.link {
+  color: var(--gold);
+  font-size: 24rpx;
+}
+
+.footer {
+  border:0rpx;
+  text-align: center;
+  padding: 20rpx 0 20rpx;
+}

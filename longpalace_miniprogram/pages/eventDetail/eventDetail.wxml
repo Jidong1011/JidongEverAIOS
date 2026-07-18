@@ -1,0 +1,48 @@
+<topbar title="活动详情" subtitle="EVENT DETAIL" />
+<view class="page-body" wx:if="{{!loading}}">
+  <!-- 商品图片轮播 -->
+  <view class="goods-images" wx:if="{{goods.images.length > 0}}">
+    <swiper class="swiper" indicator-dots="{{goods.images.length > 1}}" circular autoplay>
+      <swiper-item wx:for="{{goods.images}}" wx:key="*this">
+        <image class="slide-image" src="{{item}}" mode="aspectFill" bindtap="previewImage" data-url="{{item}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!-- 商品信息 -->
+  <view class="goods-info">
+    <view class="info-top">
+      <view class="price-row">
+        <text class="price-symbol">￥</text>
+        <text class="price">{{goods.price}}</text>
+        <text class="linePrice" wx:if="{{goods.linePrice > 0}}">￥{{goods.linePrice}}</text>
+      </view>
+      <view class="sales">已售{{goods.initSale || 0}}件</view>
+    </view>
+    <view class="goods-name">{{goods.name}}</view>
+    <view class="goods-salePoint" wx:if="{{goods.salePoint}}">{{goods.salePoint}}</view>
+  </view>
+
+  <!-- 商品详情 -->
+  <view class="goods-content" wx:if="{{goods.description}}">
+    <view class="content-title">商品详情</view>
+    <rich-text nodes="{{goods.description}}" class="content-detail"></rich-text>
+  </view>
+
+  <view class="content-empty" wx:if="{{!goods.description}}">暂无商品描述</view>
+</view>
+
+<!-- 加载中 -->
+<view class="loading" wx:if="{{loading}}">
+  <text>加载中...</text>
+</view>
+
+<!-- 底部报名栏 -->
+<view class="footer-bar" wx:if="{{!loading}}">
+  <view class="footer-back" bindtap="goBack">
+    <text>返回</text>
+  </view>
+  <button class="enroll-btn" bindtap="doEnroll" loading="{{paying}}">
+    {{paying ? '提交中...' : '立即报名'}}
+  </button>
+</view>

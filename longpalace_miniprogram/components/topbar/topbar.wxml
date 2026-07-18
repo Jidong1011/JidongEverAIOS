@@ -1,0 +1,12 @@
+<view class="topbar" style="padding-top: {{statusBarHeight}}px">
+  <view class="container topbar-inner">
+    <view class="brand" bindtap="goIndex">
+      <view class="logo">AI</view>
+      <view>
+        <view class="brand-title">{{title}}</view>
+        <view class="brand-sub">{{subtitle}}</view>
+      </view>
+    </view>
+    <view class="badge" wx:if="{{badge}}">{{badge}}</view>
+  </view>
+</view>

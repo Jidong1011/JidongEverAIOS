@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/daily/daily",
+    "pages/events/events",
+    "pages/pearls/pearls",
+    "pages/member/member",
+    "pages/benefits/benefits",
+    "pages/reportList/reportList",
+    "pages/reportDetail/reportDetail",
+    "pages/eventDetail/eventDetail"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "navigationBarBackgroundColor": "#05070d",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#05070d",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#f5f1e8",
+    "selectedColor": "#d8b76a",
+    "backgroundColor": "rgba(4,6,11,0.86)",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/daily/daily",
+        "text": "今日"
+      },
+      {
+        "pagePath": "pages/events/events",
+        "text": "活动"
+      },
+      {
+        "pagePath": "pages/member/member",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
