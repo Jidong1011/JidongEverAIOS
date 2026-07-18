@@ -1,0 +1,39 @@
+.bold {
+  font-weight: bold;
+}
+
+.page-body{
+  background: radial-gradient(circle at top, #14294d 0%, var(--bg) 46%, #020309 100%);
+  margin-bottom: 50rpx;
+}
+
+.hero{
+  padding-bottom: 30rpx;
+}
+
+.stats{
+  display: flex;
+  gap:10rpx;
+  font-size: 20rpx;
+}
+.stat{
+  width: 25%;
+  padding: 30rpx;
+}
+.stat .card{
+  border-radius: 30rpx;
+}
+.icon{
+  margin-bottom: 0rpx;
+}
+.h3{
+  margin:0 0 0rpx;
+}
+
+.stat .strong{
+  font-size:40rpx;
+}
+
+.footer{
+  font-size: 32rpx;
+}

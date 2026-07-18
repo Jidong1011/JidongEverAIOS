@@ -1,0 +1,22 @@
+<topbar title="情报日报" subtitle="DAILY REPORT" />
+<view class="page-body">
+  <view class="container">
+    <view class="loading-tip" wx:if="{{loading}}">加载中...</view>
+
+    <block wx:if="{{article && !loading}}">
+      <view class="page-title">
+        <view class="h3">{{article.title}}</view>
+        <view class="report-info">
+          <text class="small">{{aDate}}</text>
+          <text class="small">阅读 {{article.clickCount || 0}}</text>
+        </view>
+      </view>
+
+      <view class="report-content">
+        <rich-text nodes="{{article.description}}"></rich-text>
+      </view>
+    </block>
+
+    <view class="loading-tip" wx:if="{{!article && !loading}}">文章不存在</view>
+  </view>
+</view>

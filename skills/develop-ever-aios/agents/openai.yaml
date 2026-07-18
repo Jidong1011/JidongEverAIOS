@@ -1,0 +1,4 @@
+interface:
+  display_name: "Develop Ever AIOS"
+  short_description: "Develop, verify, and evolve Ever AIOS safely"
+  default_prompt: "Use $develop-ever-aios to implement and verify the next Ever AIOS platform change."

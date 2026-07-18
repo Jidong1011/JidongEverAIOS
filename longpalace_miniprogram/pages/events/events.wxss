@@ -1,0 +1,96 @@
+.bold {
+  font-weight: bold;
+}
+
+.page-body{
+  background: radial-gradient(circle at top, #14294d 0%, var(--bg) 46%, #020309 100%);
+  margin-bottom: 50rpx;
+}
+
+.page-title{
+  padding-bottom: 20rpx;
+}
+
+.lead{
+  padding-bottom: 0rpx;
+  margin-bottom: 0rpx;
+}
+
+.goods-card {
+  display: block;
+  padding: 0;
+  overflow: hidden;
+}
+
+.goods-image {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.goods-image .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.goods-detail {
+  padding: 24rpx;
+}
+
+.goods-name {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: var(--text);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  min-height: 80rpx;
+}
+
+.goods-sellingPoint {
+  font-size: 24rpx;
+  color: var(--gold);
+  margin-top: 8rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.goods-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 16rpx;
+  margin-top: 12rpx;
+}
+
+.goods-price {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: var(--red);
+}
+
+.goods-linePrice {
+  font-size: 24rpx;
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.goods-sales {
+  font-size: 24rpx;
+  color: var(--muted);
+  margin-top: 8rpx;
+}
+
+.loading-tip {
+  text-align: center;
+  color: var(--muted);
+  font-size: 26rpx;
+  padding: 40rpx 0;
+}

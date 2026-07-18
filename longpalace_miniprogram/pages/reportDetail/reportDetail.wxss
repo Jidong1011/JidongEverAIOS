@@ -1,0 +1,43 @@
+.page{
+  padding-bottom: 0rpx;
+}
+
+.page-body {
+  background: radial-gradient(circle at top, #14294d 0%, var(--bg) 46%, #020309 100%);
+}
+
+.container{
+  margin: 0rpx;
+  width: 100%;
+}
+
+.page-title{
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+
+.report-info {
+  display: flex;
+  justify-content: center;
+  gap: 40rpx;
+  margin-top: 20rpx;
+}
+
+.report-content {
+  /* border: 1px solid var(--line); */
+  border-radius: 44rpx;
+  padding: 10rpx;
+  padding-bottom: 100rpx;
+  background: rgba(255, 255, 255, .045);
+  line-height: 1.85;
+  color: var(--text);
+  font-size: 22rpx;
+  overflow: hidden;
+}
+
+.loading-tip {
+  text-align: center;
+  color: var(--muted);
+  font-size: 26rpx;
+  padding: 40rpx 0;
+}

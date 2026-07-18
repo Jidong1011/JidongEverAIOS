@@ -1,0 +1,30 @@
+<topbar title="情报日报" subtitle="DAILY REPORT" />
+<view class="page-body">
+  <view class="container">
+    <view class="page-title">
+      <view class="kicker">AI 情报日报</view>
+      <view class="h2">每日精选情报</view>
+      <view class="lead">每日推送与云南产业相关的 AI 变化、政策窗口与实战案例。</view>
+    </view>
+
+    <view class="section">
+      <view class="list">
+        <view class="list-item report-item" wx:for="{{list}}" wx:key="id" bindtap="goDetail" data-id="{{item.id}}">
+          <view class="report-main">
+            <view class="h4">{{item.title}}</view>
+            <view class="small">{{item.brief}}</view>
+            <view class="report-meta">
+              <text class="tag">{{item.categoryName || '日报'}}</text>
+              <text class="small">{{app.formateDate(item.updateTime)}}</text>
+            </view>
+          </view>
+          <view class="report-arrow">›</view>
+        </view>
+      </view>
+
+      <view class="loading-tip" wx:if="{{loading}}">加载中...</view>
+      <view class="loading-tip" wx:if="{{!loading && list.length === 0}}">暂无文章</view>
+      <view class="loading-tip" wx:if="{{!loading && page >= totalPage && list.length > 0}}">已加载全部</view>
+    </view>
+  </view>
+</view>

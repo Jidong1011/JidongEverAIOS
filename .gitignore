@@ -1,0 +1,11 @@
+.DS_Store
+node_modules/
+npm-debug.log*
+
+# WeChat Developer Tools local state
+**/project.private.config.json
+**/.vscode/*.local.json
+
+# Generated test output
+coverage/
+reports/

@@ -1,0 +1,63 @@
+<topbar title="活动" subtitle="EVENTS · AI LAB" badge="本月 {{goodsList.length}} 场" />
+<view class="page-body">
+  <view class="container">
+    <view class="page-title">
+      <view class="kicker">线下实战营 / 线上直播 / 企业内训</view>
+    </view>
+
+    <view class="section">
+      <view class="grid-2">
+        <view class="card goods-card" wx:for="{{goodsList}}" wx:key="id" bindtap="goGoodsDetail" data-id="{{item.id}}">
+          <view class="goods-image">
+            <image class="image" src="{{item.logo}}" mode="aspectFill" lazy-load></image>
+          </view>
+          <view class="goods-detail">
+            <view class="goods-name">{{item.name}}</view>
+            <view class="goods-sellingPoint" wx:if="{{item.salePoint}}">{{item.salePoint}}</view>
+            <view class="goods-price-row">
+              <text class="goods-price">￥{{item.price}}</text>
+              <text class="goods-linePrice" wx:if="{{item.linePrice > 0}}">￥{{item.linePrice}}</text>
+            </view>
+            <view class="goods-sales" wx:if="{{item.initSale}}">已售{{item.initSale}}件</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="loading-tip" wx:if="{{goodsList.length === 0}}">暂无活动</view>
+    </view>
+
+    <view class="section">
+      <view class="h2">活动流程</view>
+      <view class="route">
+        <view class="step">
+          <view class="step-num">01</view>
+          <view>
+            <text class="bold">趋势输入</text>
+            <view class="muted">只讲与云南产业相关的 AI 变化和政策窗口。</view>
+          </view>
+        </view>
+        <view class="step">
+          <view class="step-num">02</view>
+          <view>
+            <text class="bold">工具演示</text>
+            <view class="muted">现场拆解一个真实业务流程，用 Agent 生成初版成果。</view>
+          </view>
+        </view>
+        <view class="step">
+          <view class="step-num">03</view>
+          <view>
+            <text class="bold">共创练习</text>
+            <view class="muted">每位参与者选择自己的业务场景，生成第一个 AI 作品。</view>
+          </view>
+        </view>
+        <view class="step">
+          <view class="step-num">04</view>
+          <view>
+            <text class="bold">珍珠上墙</text>
+            <view class="muted">优秀作品进入珍珠页展示，并进入孵化观察名单。</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
